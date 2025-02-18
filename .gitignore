@@ -1,0 +1,6 @@
+bazel-bazel-playground
+bazel-bin
+bazel-concat_files
+bazel-out
+bazel-testlogs
+
