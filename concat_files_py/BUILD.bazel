@@ -1,0 +1,16 @@
+load("//:rules.bzl", "concat_files")
+
+concat_files(
+    name = "fizz",
+    srcs = glob(
+        ["*.yaml"],
+        allow_empty = False,
+    ),
+    filename = "fizzbuzz.file",
+)
+
+py_binary(
+    name = "pycat",
+    srcs = ["scripts/concat.py"],
+    main = "scripts/concat.py",
+)
