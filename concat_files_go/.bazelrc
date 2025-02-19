@@ -1,0 +1,7 @@
+# bzlmod is Bazel's new dependency module system.
+# At the moment, the src monorepo does not use bzlmod because we depend on legacy rulesets
+# with no bzlmod support and because it is a relatively large migration to undergo with
+# a ton of blockers.
+# For more info, see: https://bazel.build/external/migration
+common --noenable_bzlmod
+common --enable_workspace

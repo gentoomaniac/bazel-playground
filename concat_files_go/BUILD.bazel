@@ -1,0 +1,14 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+load("//:rules.bzl", "concat_files")
+
+concat_files(
+    name = "fizz",
+    srcs = glob(
+        ["*.yaml"],
+        allow_empty = False,
+    ),
+    filename = "fizzbuzz.file",
+)
+
+# gazelle:prefix github.com/gentoomaniac/bazel-playground/concat_files_go
+gazelle(name = "gazelle")

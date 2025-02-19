@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cli",
+    srcs = ["cli.go"],
+    importpath = "github.com/gentoomaniac/bazel-playground/concat_files_go/pkg/cli",
+    visibility = ["//visibility:public"],
+    deps = ["@com_github_alecthomas_kong//:kong"],
+)
