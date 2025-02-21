@@ -1,0 +1,9 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/gentoomaniac/bazel-playground/external_tools
+gazelle(name = "gazelle")
+
+alias(
+    name = "go-template",
+    actual = "@com_github_gentoomaniac_go_template//cmd/go-template",
+)
